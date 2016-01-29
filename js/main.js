@@ -7,6 +7,14 @@ $(window).on('load', function () {
 
 $(document).ready( function(){
 
+	var windowW = $(window).width();
+	if(windowW < 1100){
+		$('.burger').click(function(){
+			$('.main-nav').toggleClass('active');
+			$(this).toggleClass('active');
+		});
+	}
+
 	$('a[href="#"]').click( function(e) {
 		e.preventDefault();
 	});
@@ -66,11 +74,47 @@ $(document).ready( function(){
 	});
 
 
+	//mobile back btn for slidingpage
+	$('.back, .burger').click( function () {
+		$('.slide-page').removeClass('active');
 
+		$('.side-nav li').removeClass('active');
+		$('.side-nav li:first').addClass('active');
+	});
 
-	// $('.modal .cls-btn, .modal .declain').click( function () { 
-	// 	$('.modal').fadeOut(600);
+	//checkbox ids
+	// var id = 1,
+	// 	forId = 1;
+
+	// $('.days-field li input').each(function() {
+	// 	$(this).attr('id', 'checkbox-'+id);
+	// 	id++;
 	// });
+
+
+	// $('.days-field li input+label').each(function() {
+	// 	$(this).attr('for', 'checkbox-'+forId);
+	// 	forId++;
+	// });
+
+	// booking fields
+	$('.arrows.right').click(function(event) {
+		$('.days-field').removeClass('fadeIn').addClass('fadeOut');
+		$('.day-nav ul').removeClass('fadeInDown').addClass('fadeOut');
+		setTimeout( function(){
+			$('.days-field').removeClass('fadeOut').addClass('fadeIn');
+			$('.day-nav ul').removeClass('fadeOut').addClass('fadeInDown');
+		}, 800);
+	});
+
+	$('.arrows.left').click(function(event) {
+		$('.days-field').removeClass('fadeIn').addClass('fadeOut');
+		$('.day-nav ul').removeClass('fadeInDown').addClass('fadeOut');
+		setTimeout( function(){
+			$('.days-field').removeClass('fadeOut').addClass('fadeIn');
+			$('.day-nav ul').removeClass('fadeOut').addClass('fadeInDown');
+		}, 800);
+	});
 
 	// expand password section
 

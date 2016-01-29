@@ -1,6 +1,6 @@
 /*------------------------------RESET DEFAULT STYLES--------------------------------*/
 /*----------------------------------------------------------------------------------*/
-html,body                       { width:100%; height:100%; position: relative; min-width: 1180px;}
+html,body                       { width:100%; height:100%; position: relative;}
 body                            { padding:0; margin:0; font:14px ProximaNova; line-height: 1.5; background: #fff; color:#232E3C;}
 div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,input,textarea,header, nav, section, article, aside, footer {
 	padding:0;
@@ -167,11 +167,38 @@ input[type="radio"]{
 	z-index: 4000;
 }
 
-@keyframes infinite-spinning {
-  0% {
+@-webkit-keyframes infinite-spinning {
+  0%{
     transform: rotate(0deg);
   }
-  100% {
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes infinite-spinning {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes infinite-spinning {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes infinite-spinning {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
     transform: rotate(360deg);
   }
 }
@@ -218,6 +245,54 @@ input[type="radio"]{
 	padding: 40px 50px;
  	overflow: hidden;
  	height: 110px;
+}
+
+.burger{
+	position: absolute;
+	top: 41px;
+	left: 50px;
+	display: none;
+	width: 25px;
+	height: 30px;
+	overflow: hidden;
+	z-index: 1500;
+}
+
+.burger span:before,
+.burger span:after,
+.burger span{
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 2px;
+	content: "";
+}
+
+.top-navbar .burger span:before,
+.top-navbar .burger span:after,
+.top-navbar .burger span,
+.top-navbar.white .burger.active span:before,
+.top-navbar.white .burger.active span:after,
+.top-navbar.white .burger.active span{
+	background: #000;
+}
+
+.top-navbar.white .burger span:before,
+.top-navbar.white .burger span:after,
+.top-navbar.white .burger span{
+	background: #fff;
+}
+
+.burger span:before{
+	position: absolute;
+	top:-7px;
+	left: 0;
+}
+
+.burger span:after{
+	position: absolute;
+	bottom: -7px;
+	left: 0;
 }
 
 .top-navbar.white a{
@@ -472,7 +547,7 @@ input[type="radio"]{
 	height: 100%;
 	background: rgba(255, 255, 255, .85);
 	padding: 150px 100px 70px 70px;
-	z-index: 500;
+	z-index: 1000;
 
 	-webkit-transform: translateX(100%);
 	-ms-transform: translateX(100%);
@@ -489,6 +564,10 @@ input[type="radio"]{
 	-ms-transform: translateX(0);
 	-o-transform: translateX(0);
 	transform: translateX(0);
+}
+
+.back{
+	display: none;
 }
 
 .slide-page dl{
@@ -516,16 +595,6 @@ input[type="radio"]{
 
 .slide-page dd p {
 	margin: 0 0 15px;
-}
-
-.slide-page .table-section{
-  clear: both;	
-  width: 100%;
-}
-
-.slide-page table tr td:first-child{
-  	text-align: left;
-	 padding: 5px 5px 5px 10px;
 }
 
 .slide-page footer{
@@ -603,7 +672,10 @@ input[type="radio"]{
 }
 
 /*BOOKING PAGE*/
+
 .booking .content{
+	max-width: 1350px;
+	margin: 0 auto;
 	padding: 40px 100px 0 50px;
 }
 
@@ -635,9 +707,15 @@ input[type="radio"]{
 	padding: 0 10px;
 }
 
+.main-field{
+	float: left;
+	width: 76.5%;
+}
+
 .booking .form-sidebar{
+	float: left;
 	width: 275px;
-	float: right;
+	width: 23.5%;
 }
 
 .booking .form-sidebar h2{
@@ -788,10 +866,10 @@ input[type="radio"]{
 }
 
 .time-section{
+	font: 11px ProximaNova-Semibold;
 	width: 190px;
 	float: left;
 	padding: 57px 0 0;
-	font: 11px ProximaNova-Semibold;
 	text-align: center;
 
 	-webkit-user-select: none;
@@ -802,6 +880,7 @@ input[type="radio"]{
 }
 
 .picker-field{
+	padding:0 35px;
 	overflow: hidden;
 }
 
@@ -830,21 +909,21 @@ input[type="radio"]{
 	font: 18px ProximaNova-Light; 
 }
 
+.time-section li{
+	margin-bottom: 3px;
+}
+
 .time-section li:nth-child(odd){
 	background: #efefef;
 }
 
-.time-section li:nth-child(even){
-	height: 33px;
-	line-height: 34px;
-}
 
 .booking .endnotes{
 	padding-top: 30px;
 }
 
 .booking .endnotes ul{
-	max-width: 550px;
+	max-width: 600px;
 	width: 100%;
 	overflow: hidden;
 	margin: 0 auto;
@@ -865,6 +944,114 @@ input[type="radio"]{
 	display: table-cell;
 	vertical-align: middle;
 }
+
+.day-nav{
+	position: relative;
+	margin: 0 0 14px;
+}
+
+.day-nav .arrows{
+	position: absolute;
+	top: 0;
+	width: 30px;
+	height: 40px;
+	z-index: 10;
+}
+
+.day-nav .arrows.left{
+	background: url(../img/svg/arrow-l.svg) center no-repeat;
+	left: -30px;
+}
+
+.day-nav .arrows.right{
+	background: url(../img/svg/arrow-r.svg) center no-repeat;
+	right: 5px;
+}
+
+.day-nav .active{
+	color: #6b8fca;
+}
+
+.day-nav li span{
+	font: 22px ProximaNova-Semibold;
+	display: block;
+}
+
+.days-field{
+	cursor: url(../img/svg/plus.svg), auto;
+}
+
+.day-nav  ul,
+.days-field ul{
+	overflow: hidden;
+}
+
+.day-nav li{
+	font: 12px ProximaNova-Light;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.day-nav li,
+.days-field > ul > li li{
+	float: left;
+	width: 13%;
+	margin: 0 3px 0 0;
+}
+
+.days-field > ul > li li{
+	height: 27px;
+}
+
+.days-field > ul > li{
+	margin: 0 0 3px;
+}
+
+.days-field > ul > li:nth-child(odd) li{
+	background: #efefef;
+}
+
+.days-field input[type="checkbox"] + label{
+	display: block;	
+	height: 100%;
+	width: 100%;
+	cursor: url(../img/svg/plus.svg), auto;
+}
+
+.days-field input[type="checkbox"] + label:before{
+	display: none;
+}
+
+/*paid time*/
+.days-field input[type="checkbox"] + .paid{
+	background: #415268;
+}
+
+.days-field input[type="checkbox"] + .paid:hover{
+	background: #415268;
+	cursor: none;
+}
+
+/*checked time*/
+.days-field input[type="checkbox"]:checked + label{
+	background: #82CDF1;
+}
+
+/*hover*/
+.days-field input[type="checkbox"] + label:hover{
+	background: #6b8fca;
+}
+
+/*reserved time*/
+.days-field input[type="checkbox"] + label.without-pay{
+	background: #6b8fca;
+}
+
+.days-field input[type="checkbox"] + label.without-pay:hover{
+	background: #6b8fca;
+	cursor: none;
+}
+
 
 .endnotes li:before{
 	position: absolute;
@@ -971,7 +1158,7 @@ input[type="radio"]{
 }
 
 .cabinet .content{
-	width: 590px;
+	max-width: 590px;
 	margin: 0 auto;
 	padding: 60px 40px;
 }
@@ -1052,7 +1239,8 @@ input[type="checkbox"]:checked + label:before{
 /*NOtes-profile page*/
 
 .cabinet .profile-notes{
-	width: 880px;
+	max-width: 880px;
+	width: 100%;
 }
 
 .table .thead,
@@ -1142,9 +1330,13 @@ input[type="checkbox"]:checked + label:before{
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	width: 520px;
+	max-height: 100%;
+	max-width: 520px;
+	width: 100%;
 	background: #fff;
 	padding: 0 60px 45px;
+	overflow-x:hidden;
+	overflow-y:auto;
 
 	-webkit-transform: translate(-50%, -50%) scale(0);
 	-ms-transform: translate(-50%, -50%) scale(0);
@@ -1314,7 +1506,7 @@ input[type="checkbox"]:checked + label:before{
 /*DELETE-NOTE MODAL*/
 
 .modal.delete-note{
-	width: 500px;
+	max-width: 500px;
 	padding: 0 30px 60px;
 }
 
@@ -1324,4 +1516,9 @@ input[type="checkbox"]:checked + label:before{
 	width: 60%;
 	margin: 0 auto 35px;
 	text-align: center;
+}
+
+.delete-note .btns-list li{
+	display: inline-block;
+	margin: 0 10px 15px;
 }
