@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Личные данные</title>
+
+		<!-- fonts -->
+		<link rel="stylesheet" href="fonts/styles.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+		<!--styles-->
+
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/media.css">
+	</head>
+
+	<body class="booking">
+
+		<div class="wrap">
+
+ 			<header class="header">
+ 				<nav class="top-navbar">
+ 					<a class="profile-link" href="#">Личный кабинет</a>
+ 					<a href="index.html" class="logo"><img src="img/logo.png" alt="Space studio logo">Space studio</a>
+ 					<ul class="main-nav">
+ 						<li><a href="rooms.html">Залы</a></li>
+ 						<li class="reservation"><a href=".html">Забронировать</a></li>
+ 						<li><a href="contacts.html">Контакты</a></li>
+ 					</ul>
+ 				</nav> <!-- /main-nav -->
+ 			</header>
+
+			<div class="content">
+				<form action="">
+					<section class="form-sidebar">
+						<section>
+							<h2>Стоимость</h2>
+							<section>
+								<h3>Аренда для фотосъемки</h3>
+								<dl>
+									<dt>Пн. - Чт.</dt>
+									<dd> 450 гривен</dd>
+									<dt>Пт. - Вс.</dt>
+									<dd>500 гривен</dd>
+								</dl>
+							</section>
+
+							<section>
+								<h3>Аренда для видеосъемки</h3>
+								<dl>
+									<dt>Пн. - Чт.</dt>
+									<dd>650 гривен</dd>
+									<dt>Пт. - Вс.</dt>
+									<dd>700 гривен</dd>
+								</dl>
+							</section>
+
+							<section>
+								<h3>Целевая аренда студии</h3>
+								<dl>
+									<dt>Пн. - Чт.</dt>
+									<dd>650 гривен</dd>
+									<dt>Пт. - Вс.</dt>
+									<dd>700 гривен</dd>
+								</dl>
+							</section>
+						</section>
+
+						<section>
+							<h2>Бронирование</h2>
+							<section>
+								<ul class="booking-list">
+									<li>
+										<ul>
+											<li class="date">04.12.2015</li>
+											<li class="time">12:00  -  13:00</li>
+											<li class="price">450 грн</li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li class="date">04.12.2015</li>
+											<li class="time">14:00  -  15:00</li>
+											<li class="price">450 грн</li>
+										</ul>
+									</li>
+								</ul>
+
+								<dl class="total">
+									 <dt>ВСЕГО</dt><dd>900 грн</dd>
+								</dl>
+							</section>
+
+							<section class="contact-form">
+								<ul>
+									<li><label for="">Ваше имя</label><input class="input-style" type="text"></li>
+									<li><label for="">Ваш номер телефона</label><input  class="input-style" type="text"></li>
+									<li><label for="">Email</label><input class="input-style" type="email"></li>
+									<li><label for="">Примечания</label><textarea class="input-style" name="" id="" cols="30" rows="10"></textarea></li>
+									<li><label for="">Номер дисконт карты</label><input class="input-style" type="text"></li>
+								</ul>
+							</section>
+							<section class="terms">
+							 	<input type="checkbox" name="" id="require"><label for="require">Я соглашаюсь с правилами использования студии</label>
+							</section>	
+							<footer class="submit-section">
+								<button class="btn blue" id="booking-btn">Забронировать</button>
+							</footer>
+						</section>
+					</section><!--/form-sidebar-->
+
+					<section class="main-field">
+						
+						<fieldset class="types-option">
+							<h2>Выберите тип съемки</h2>
+							<ul class="btns-list">
+								<li><input type="radio" id="photography" name="type"><label class="btn" for="photography">Фотосъемка</label></li>
+								<li><input type="radio" id="video" name="type"><label class="btn" for="video">Видеосъемка</label></li>
+								<li><input type="radio" id="rent" name="type"><label class="btn" for="rent">Целевая аренда</label></li>
+							</ul>
+						</fieldset>
+
+						<fieldset class="rooms-option">
+							<h2>Выберите зал</h2>
+							<ul class="btns-list">
+								<li><input type="radio" id="room-1" name="room"><label class="btn" for="room-1">Зал 1</label></li>
+								<li><input type="radio" id="room-2" name="room"><label class="btn" for="room-2">Зал 2</label></li>
+								<li><input type="radio" id="room-3" name="room"><label class="btn" for="room-3">Зал 3</label></li>
+								<li><input type="radio" id="design-room" name="room"><label class="btn" for="design-room">Гримерка</label></li>
+							</ul>
+						</fieldset>
+
+						<fieldset class="datetime-picker">
+							<h2>
+								<span class="room">ЗАЛ 01</span> 
+								<span class="month">декабрь</span> 
+								<span class="year">2015</span>
+							</h2>
+							<section>
+								<ul class="time-section">
+									<li>00:00  -  01:00</li>
+									<li>01:00  -  02:00</li>
+									<li>02:00  -  03:00</li>
+									<li>03:00  -  04:00</li>
+									<li>04:00  -  05:00</li>
+									<li>05:00  -  06:00</li>
+									<li>06:00  -  07:00</li>
+									<li>07:00  -  08:00</li>
+									<li>08:00  -  09:00</li>
+									<li>09:00  -  10:00</li>
+									<li>10:00  -  11:00</li>
+									<li>11:00  -  12:00</li>
+									<li>12:00  -  13:00</li>
+									<li>13:00  -  14:00</li>
+									<li>14:00  -  15:00</li>
+									<li>15:00  -  16:00</li>
+									<li>16:00  -  17:00</li>
+									<li>17:00  -  18:00</li>
+									<li>18:00  -  19:00</li>
+									<li>19:00  -  20:00</li>
+									<li>20:00  -  21:00</li>
+									<li>21:00  -  22:00</li>
+									<li>22:00  -  23:00</li>
+									<li>23:00  -  24:00</li>
+								</ul>
+								<section class="picker-field">
+									<img src="img/field.jpg" alt="">
+									<aside class="endnotes">
+										<ul>
+											<li class="cursor-click"><span>Клик по ячейке добавляет указанное время в форму для бронирования</span></li>
+											<li class="selected-marker"><span>Выбранное для бронирования время</span></li>
+											<li class="nopaid-marker"><span>Забронированное, но неоплаченное время</span></li>
+											<li class="paid-marker"><span>Оплаченное время</span></li>
+										</ul>
+									</aside>	 
+								</section>
+							</section>
+						</fieldset>
+
+						
+					</section><!--/main-field-->
+				</form>
+
+			</div> <!--/ content-->
+
+			<footer class="footer">
+				<nav class="social">
+					<ul>
+						<li><a href="#"><i class="fa fa-vk"></i></a></li>
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+					</ul>
+				</nav>
+
+				<nav class="lang-nav">
+					<ul>
+						<li class="active"><a href="#">Рус</a></li>
+						<li><a href="#">Eng</a></li>
+					</ul>
+				</nav>
+			</footer>
+		</div><!--/wrap-->
+
+ 
+
+		<!--Modals-->
+
+		<div class="modal-backdrop"></div>
+		<div class="modal enter-modal">
+			<header>
+				<a href="#" class="cls-btn">&times;</a>
+				<h4>Войти в личный кабинет</h4>
+			</header>
+
+			<section class="modal-body">
+				<form action="">
+					<ul class="input-list">
+						<li><input class="input-style" type="email" placeholder="email"></li>
+						<li><input class="input-style" type="password" placeholder="Пароль"></li>
+					</ul>
+
+					<a class="forgotten-pass" href="#">Забыли пароль?</a>
+
+					<ul class="btns-list">
+						<li>
+							<button class="btn blue">Войти</button>
+						</li>
+						<li>
+							<button class="btn white" id="register-btn">Регистрация</button>
+						</li>
+					</ul>
+				</form>
+			</section>
+
+			<footer>
+				<h4>Войти с помощью</h4>
+				<ul class="social-list">
+					<li><a class="facebook" href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
+					<li><a class="vk" href="#"><i class="fa fa-vk"></i>Vkontakte</a></li>
+				</ul>
+			</footer>
+		</div> <!-- /modal enter -->
+
+		<div class="modal register-modal">
+			<header>
+				<h4>Регистрация</h4>
+				<a href="#" class="cls-btn">&times;</a>
+			</header>
+			 		
+			<section>
+				<form action="">
+					<ul>
+						<li><input class="input-style" type="text" placeholder="Имя"></li>
+						<li><input class="input-style" type="text" placeholder="Фамилия"></li>
+						<li><input class="input-style" type="email" placeholder="email"></li>
+						<li><input class="input-style" type="tel" placeholder="Телефон"></li>
+						<li><input class="input-style" type="password" placeholder="Пароль"></li>
+						<li><input class="input-style" type="password" placeholder="Повторить пароль"></li>
+					</ul>
+					<footer>
+						<button class="btn blue" type="submit">Зарегистрироваться</button>
+					</footer>
+				</form>
+			</section>
+			 
+		</div><!-- /register-modal -->
+
+		<div class="modal booking-modal">
+			<header>
+				<h4>Ваше время успешно забронировано!</h4>
+				<a href="#" class="cls-btn">&times;</a>
+			</header>
+			<section>
+				<p>В ближайшее время с вами свжется наш <br> менеджер для подтверждения вешей брони</p>
+			</section>
+			<footer>
+				<a href="personal-data.html" class="btn" type="submit">Перейти в личный кабинет</a>
+			</footer>
+		</div><!--/booking-modal-->
+
+	 
+<!--Scripts-->
+		<script src="js/jquery-1.11.3.min.js"></script>	   		
+		<script src="js/main.js"></script>
+	</body>
+</html>

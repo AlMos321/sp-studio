@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Контакты</title>
+
+		<!-- fonts -->
+		<link rel="stylesheet" href="fonts/styles.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+		<!--styles-->
+
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/media.css">
+	</head>
+
+	<body class="contacts">
+
+		<div class="wrap">
+
+ 			<header class="header">
+ 				<nav class="top-navbar">
+ 					<a class="profile-link" href="#">Личный кабинет</a>
+ 					<a href="index.html" class="logo"><img src="img/logo.png" alt="Space studio logo">Space studio</a>
+ 					<ul class="main-nav">
+ 						<li><a href="rooms.html">Залы</a></li>
+ 						<li class="reservation"><a href="booking.html">Забронировать</a></li>
+ 						<li><a href="contacts.html">Контакты</a></li>
+ 					</ul>
+ 				</nav> <!-- /main-nav -->
+
+ 			</header>
+
+			<div class="content">
+				<p>Новая фотостудия SPACESTUDIO – это более 300 м2, предназначенных для фото- и видеосъемок, перформансов, воплощения разнообразных сюжетов и реализации любых других визуальных идей. Мы предоставляем в аренду четыре съемочных зала со стильными декорациями, профессиональным оборудованием и всеми необходимыми условиями для удобной и качественной работы. </p>
+
+				<p>Работаем 24/7. </p>
+
+				<section class="contacts-block">
+					<p class="address">Киев <br>
+					ул. Глыбочицкая, 44, 2-й этаж <br>
+					Ближайшее метро: Контрактовая площадь, Лукьяновская
+					</p>
+					<h2>Прием звонков с 10:00 до 21:00:</h2>
+					<ul class="contacts-list">
+						<li><a href="tel:+380969618818">Т. +38096 961 88 18</a></li>
+						<li><a href="tel:+380630668818">Т. +38063 066 88 18</a></li>
+						<li class="email"><a href="mailto:spacestudio.ua@gmail.com">Е. spacestudio.ua@gmail.com</a></li>
+					</ul>
+				</section>
+
+				<div id="map" class="map"></div>
+				 
+			</div> <!--/ content-->
+
+			<footer class="footer">
+				<nav class="social">
+					<ul>
+						<li><a href="#"><i class="fa fa-vk"></i></a></li>
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+					</ul>
+				</nav>
+
+				<nav class="lang-nav">
+					<ul>
+						<li class="active"><a href="#">Рус</a></li>
+						<li><a href="#">Eng</a></li>
+					</ul>
+				</nav>
+			</footer>
+		</div><!--/wrap-->
+
+
+		<!--Modals-->
+		<div class="modal-backdrop"></div>
+		<div class="modal enter-modal">
+			<header>
+				<a href="#" class="cls-btn">&times;</a>
+				<h4>Войти в личный кабинет</h4>
+			</header>
+
+			<section class="modal-body">
+				<form action="">
+					<ul class="input-list">
+						<li><input class="input-style" type="email" placeholder="email"></li>
+						<li><input class="input-style" type="password" placeholder="Пароль"></li>
+					</ul>
+
+					<a class="forgotten-pass" href="#">Забыли пароль?</a>
+
+					<ul class="btns-list">
+						<li>
+							<button class="btn blue">Войти</button>
+						</li>
+						<li>
+							<button class="btn white" id="register-btn">Регистрация</button>
+						</li>
+					</ul>
+				</form>
+			</section>
+
+			<footer>
+				<h4>Войти с помощью</h4>
+				<ul class="social-list">
+					<li><a class="facebook" href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
+					<li><a class="vk" href="#"><i class="fa fa-vk"></i>Vkontakte</a></li>
+				</ul>
+			</footer>
+		</div> <!-- /modal enter -->
+
+		<div class="modal register-modal">
+			<header>
+				<h4>Регистрация</h4>
+				<a href="#" class="cls-btn">&times;</a>
+			</header>
+			 		
+			<section>
+				<form action="">
+					<ul>
+						<li><input class="input-style" type="text" placeholder="Имя"></li>
+						<li><input class="input-style" type="text" placeholder="Фамилия"></li>
+						<li><input class="input-style" type="email" placeholder="email"></li>
+						<li><input class="input-style" type="tel" placeholder="Телефон"></li>
+						<li><input class="input-style" type="password" placeholder="Пароль"></li>
+						<li><input class="input-style" type="password" placeholder="Повторить пароль"></li>
+					</ul>
+					<footer>
+						<button class="btn blue" type="submit">Зарегистрироваться</button>
+					</footer>
+				</form>
+			</section>
+			 
+		</div><!-- /register-modal -->
+ 
+	 
+<!--Scripts-->
+		<!--<script src="js/jquery-1.11.3.min.js"></script>	 -->  
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		
+		<script src="js/main.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFJl-oqf0NECka4ZBhXlOVfeUnLvAa-Yw"></script>
+		<script type="text/javascript">
+
+		// Create and Initialise the Map (required) our google map below
+
+		google.maps.event.addDomListener(window, 'load', init);
+
+		function init() {
+		// Basic options for a simple Google Map
+		// For more options see: https://developers.google.com/maps/documentation/java..
+
+		var mapOptions = {
+
+		// How zoomed in you want the map to start at (always required)
+
+		zoom: 17,
+		scrollwheel: false,
+		// The latitude and longitude to center the map (always required)
+
+		center: new google.maps.LatLng(50.4618329,30.4980818), // Nova Scotia
+
+		// How you would like to style the map. 
+		// This is where you would paste any style found on [Snazzy Maps][1].
+		// copy the Styles from Snazzy maps, and paste that style info after the word "styles:"
+
+		styles:
+			
+		[{"featureType":"administrative","elementType":"all","stylers":[{"visibility":"on"},{"lightness":33}]},{"featureType":"administrative","elementType":"labels","stylers":[{"saturation":"-100"}]},{"featureType":"administrative","elementType":"labels.text","stylers":[{"gamma":"0.75"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text.fill","stylers":[{"lightness":"-37"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f9f9f9"}]},{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"saturation":"-100"},{"lightness":"40"},{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"labels.text.fill","stylers":[{"saturation":"-100"},{"lightness":"-37"}]},{"featureType":"landscape.natural","elementType":"labels.text.stroke","stylers":[{"saturation":"-100"},{"lightness":"100"},{"weight":"2"}]},{"featureType":"landscape.natural","elementType":"labels.icon","stylers":[{"saturation":"-100"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"saturation":"-100"},{"lightness":"80"}]},{"featureType":"poi","elementType":"labels","stylers":[{"saturation":"-100"},{"lightness":"0"}]},{"featureType":"poi.attraction","elementType":"geometry","stylers":[{"lightness":"-4"},{"saturation":"-100"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#c5dac6"},{"visibility":"on"},{"saturation":"-95"},{"lightness":"62"}]},{"featureType":"poi.park","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":20}]},{"featureType":"road","elementType":"all","stylers":[{"lightness":20}]},{"featureType":"road","elementType":"labels","stylers":[{"saturation":"-100"},{"gamma":"1.00"}]},{"featureType":"road","elementType":"labels.text","stylers":[{"gamma":"0.50"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"saturation":"-100"},{"gamma":"0.50"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#c5c6c6"},{"saturation":"-100"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"lightness":"-13"}]},{"featureType":"road.highway","elementType":"labels.icon","stylers":[{"lightness":"0"},{"gamma":"1.09"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#e4d7c6"},{"saturation":"-100"},{"lightness":"47"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"lightness":"-12"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"saturation":"-100"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#fbfaf7"},{"lightness":"77"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"lightness":"-5"},{"saturation":"-100"}]},{"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"saturation":"-100"},{"lightness":"-15"}]},{"featureType":"transit.station.airport","elementType":"geometry","stylers":[{"lightness":"47"},{"saturation":"-100"}]},{"featureType":"water","elementType":"all","stylers":[{"visibility":"on"},{"color":"#acbcc9"}]},{"featureType":"water","elementType":"geometry","stylers":[{"saturation":"53"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"lightness":"-42"},{"saturation":"17"}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"lightness":"61"}]}]
+		};
+
+		var mapElement = document.getElementById('map');
+
+		// Create the Google Map using out element and options defined above
+		var map = new google.maps.Map(mapElement, mapOptions);
+
+		// Following section, you can create your info window content using html markup
+
+
+
+		// Define the image to use for the map marker (58 x 44 px)
+
+		var image = 'http://uploads.webflow.com/537f700d5bb0a27f34444d0c/5..';
+
+		// Define the Lattitude and Longitude for the map location
+
+		var myLatLng = new google.maps.LatLng(50.461842, 30.498715);
+
+		// Define the map marker characteristics
+		var mapMarker = new
+		google.maps.Marker({
+		position: myLatLng,
+		map: map,
+		title: 'ул. Глыбочицкая 44, Киев'
+
+		});
+
+		// // Following Lines are needed if you use the Info Window to display content when map marker is clicked
+
+		// var infowindow = new google.maps.InfoWindow({
+		// // content: contentString
+		// });
+
+		// // Following line turns the marker, into a clickable button and when clicked, opens the info window
+
+		// google.maps.event.addListener(mapMarker, 'click', function() {
+		// infowindow.open(map, mapMarker);
+		// }); 
+
+		}
+
+		</script>
+	</body>
+</html>

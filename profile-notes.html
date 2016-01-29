@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Личные данные</title>
+
+		<!-- fonts -->
+		<link rel="stylesheet" href="fonts/styles.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+		<!--styles-->
+
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/media.css">
+	</head>
+
+	<body class="cabinet">
+
+		<div class="wrap">
+
+ 			<header class="header">
+ 				<nav class="top-navbar">
+ 					<a class="profile-link" href="#">Личный кабинет</a>
+ 					<a href="index.html" class="logo"><img src="img/logo.png" alt="Space studio logo">Space studio</a>
+ 					<ul class="main-nav">
+ 						<li><a href="rooms.html">Залы</a></li>
+ 						<li class="reservation"><a href="booking.html">Забронировать</a></li>
+ 						<li><a href="contacts.html">Контакты</a></li>
+ 					</ul>
+ 				</nav> <!-- /main-nav -->
+
+ 				<nav class="profile-nav">
+ 					<ul>
+ 						<li><a href="personal-data.html">Личные данные</a></li>
+ 						<li class="active"><a href="profile-notes.html">Мои записи</a></li>
+ 						<li><a href="delivering.html">Рассылка</a></li>
+ 						<li><a href="#">Выход</a></li>
+ 					</ul>
+ 				</nav><!-- /profile-nav -->
+ 			</header>
+
+			<div class="content profile-notes">
+				<form action="">
+					<div class="table">
+						<div class="thead">
+							<div class="col date">Дата</div>
+							<div class="col time">Время</div>
+							<div class="col cost">Стоимость</div>
+						</div> <!-- /thead -->
+
+						<div class="tbody">
+							<div class="row">
+								<div class="col date"><p>01.01.2016</p></div>
+								<div class="col time">
+									<ul>
+										<li>12:00 - 13:00</li>
+									</ul>
+								</div>
+								<div class="col cost">450 ГРН</div>
+								<div class="col canceled"><button>Отменить бронирование</button></div>
+							</div><!--/ row -->
+
+							<div class="row">
+								<div class="col date"><p>01.01.2016</p></div>
+								<div class="col time">
+									<ul>
+										<li>12:00 - 13:00</li>
+										<li>14:00 - 15:00</li>
+									</ul>
+								</div>
+								<div class="col cost">450 ГРН</div>
+								<div class="col canceled"><button>Отменить бронирование</button></div>
+							</div><!--/ row -->
+							
+						</div><!-- /tbody -->
+					</div>
+
+					<footer>
+						<button class="btn blue">Сохранить</button>
+					</footer>	
+				</form>
+				
+				 
+			</div> <!--/ content-->
+
+			<footer class="footer">
+				<nav class="social">
+					<ul>
+						<li><a href="#"><i class="fa fa-vk"></i></a></li>
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+					</ul>
+				</nav>
+
+				<nav class="lang-nav">
+					<ul>
+						<li class="active"><a href="#">Рус</a></li>
+						<li><a href="#">Eng</a></li>
+					</ul>
+				</nav>
+			</footer>
+		</div><!--/wrap-->
+
+<!-- modals	 -->
+		<div class="modal-backdrop"></div>
+		<div class="modal delete-note">
+			<header>
+				<a href="#" class="cls-btn">&times;</a>
+			</header>
+
+			<section>
+				<p>Вы действительно хотите удалить бронирование?</p>
+			</section>
+
+			<footer>
+				<ul class="btns-list">
+					<li><button class="btn grey accept">Да</button></li>
+					<li><button class="btn declain">Нет</button></li>
+				</ul>
+			</footer>
+		</div>
+	 
+<!--Scripts-->
+		<!--<script src="js/jquery-1.11.3.min.js"></script>	 -->  
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		
+		<script src="js/main.js"></script>
+	</body>
+</html>
