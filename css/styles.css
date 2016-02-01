@@ -256,6 +256,7 @@ input[type="radio"]{
 	height: 30px;
 	overflow: hidden;
 	z-index: 1500;
+	cursor: pointer;
 }
 
 .burger span:before,
@@ -266,6 +267,10 @@ input[type="radio"]{
 	width: 100%;
 	height: 2px;
 	content: "";
+
+	-webkit-transition: .45s;
+	-o-transition: .45s;
+	transition: .45s;
 }
 
 .top-navbar .burger span:before,
@@ -294,6 +299,25 @@ input[type="radio"]{
 	bottom: -7px;
 	left: 0;
 }
+
+.burger.active span{
+  opacity:1;
+  transform: rotate(-45deg);
+}
+
+.burger.active span:before{
+  top:0;
+  left: 0;
+  transform: rotate(90deg);
+}
+
+.burger.active span:after{
+  opacity:0;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+
 
 .top-navbar.white a{
 	color: #fff;
@@ -1500,6 +1524,21 @@ input[type="checkbox"]:checked + label:before{
 .booking-modal p{
 	font: 11px ProximaNova-Light;
 	margin: 0 0 50px;
+}
+
+
+/*FORGETPASS MODAL*/
+
+.recovery-modal ul{
+	padding:0 0 25px;
+}
+
+.recovery-modal footer{
+	text-align: center;
+}
+
+.success-modal{
+	padding-bottom: 0;
 }
 
 

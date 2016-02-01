@@ -72,6 +72,11 @@
 		text-indent: -993em;
 	}
 
+	.top-navbar.white .profile-link:hover,
+	.top-navbar .profile-link:hover{
+		background-position: center;
+	}
+
 	.header .main-nav{
 		position: fixed;
 		display: block;
@@ -378,6 +383,10 @@
 	.profile-notes .table{
 		padding: 0 0 30px;
 	}
+
+	.booking input[type="radio"]+label.btn{
+		font-size: 12px;
+	}
 }
 
 @media all and (max-width: 480px){
@@ -413,7 +422,34 @@
 		width: 100%;
 	}
 
+	.time-section{
+		width: 60px;
+	}
 
+	.time-section li{
+	    line-height: 1.2;
+   		padding: 3px 5px 0 11px;
+    	text-align: left;
+	}
+}
+
+@media all and (max-width: 440px){
+	.booking .content {
+	    padding: 20px 10px 0 20px;
+	}
+
+	.booking form .btns-list li {
+	    display: block;
+	    margin: 0 0 20px;
+	}
+
+	.day-nav li span{
+		font-size: 14px;
+	}
+
+	.time-section{
+		padding: 46px 0 0;
+	}
 }
 
 @media all and (max-width: 420px){
@@ -425,6 +461,15 @@
 	.enter-modal form .btns-list .btn{
 		padding: 0 20px;
 	}	
+
+	.booking .content{
+		padding: 0 0 0 10px;
+	}
+
+	.days-field > ul > li li,
+	.day-nav li{
+		width: 12%;
+	}
 }
 
 @media all and (max-width: 380px){
@@ -567,7 +612,7 @@
 @media all and (max-width: 360px) and (orientation: portrait){
 
 	.home .info {
-		padding: 50% 50px 0 30px;
+		padding: 40% 50px 0 30px;
 	}
 	
 	.home .info h2{
@@ -687,13 +732,15 @@
 	.rooms .slide-page{
 		width: 65%;
 	}
-
-
-
+}
 
 @media all and (max-width: 480px) and (orientation: landscape){
 	.home .info h2{
-		font-size: 14px;
+		font-size: 13px;
+	}
+
+	.home .info p{
+		font-size: 11px;
 	}
 	
 	.slide-page p, 

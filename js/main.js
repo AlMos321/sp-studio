@@ -39,6 +39,22 @@ $(document).ready( function(){
 		}, 700);
 	});
 
+	$('.forgotten-pass').click( function(e) {
+		e.preventDefault();
+		$('.enter-modal').removeClass('active');
+		setTimeout(function () {
+			$('.recovery-modal').addClass('active');
+		}, 700);
+	});
+
+	$('.recovery-modal .btn').click( function(e) {
+		e.preventDefault();
+		$('.recovery-modal').removeClass('active');
+		setTimeout(function () {
+			$('.success-modal').addClass('active');
+		}, 700);
+	});
+
 	$('#booking-btn').click( function (e) {
 		e.preventDefault();
 		$('.modal-backdrop').fadeIn(700);
@@ -81,21 +97,6 @@ $(document).ready( function(){
 		$('.side-nav li').removeClass('active');
 		$('.side-nav li:first').addClass('active');
 	});
-
-	//checkbox ids
-	// var id = 1,
-	// 	forId = 1;
-
-	// $('.days-field li input').each(function() {
-	// 	$(this).attr('id', 'checkbox-'+id);
-	// 	id++;
-	// });
-
-
-	// $('.days-field li input+label').each(function() {
-	// 	$(this).attr('for', 'checkbox-'+forId);
-	// 	forId++;
-	// });
 
 	// booking fields
 	$('.arrows.right').click(function(event) {
